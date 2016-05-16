@@ -1,4 +1,4 @@
-import API from '../lib/api'
+import API from './lib/api'
 
 export function handler (event, { succeed, fail }) {
   console.log('event', JSON.stringify(event, null, 2))
