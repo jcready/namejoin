@@ -1,0 +1,19 @@
+{
+  "name": "namejoin",
+  "version": "1.0.0",
+  "description": "Example parameterized script.",
+  "main": "recordChangeHandler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwestergard/namejoin.git"
+  },
+  "author": "Bjorn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwestergard/namejoin/issues"
+  },
+  "homepage": "https://github.com/bwestergard/namejoin#readme"
+}
