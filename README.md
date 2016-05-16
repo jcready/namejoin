@@ -1,0 +1,2 @@
+# namejoin
+Example parameterized script.
