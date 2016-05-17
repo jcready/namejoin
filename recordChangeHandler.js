@@ -1,7 +1,7 @@
 import API from './lib/api'
 
 export function handler (event, { succeed, fail }) {
-  console.log('event', JSON.stringify(event, null, 2))
+  console.log('event:', JSON.stringify(event, null, 2))
 
   const request = API(event)
   const done = (e, res) => e ? fail(e) : succeed(res)
