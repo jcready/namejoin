@@ -1,9 +1,10 @@
 import API from './lib/api'
 
-export function handler (event, { succeed, fail }) {
+export function handler (event, cb) {
   console.log('event:', JSON.stringify(event, null, 2))
-  succeed(event)
+  cb(null, event)
   return
+}
 
   // const request = API(event)
   // const done = (e, res) => e ? fail(e) : succeed(res)
@@ -21,4 +22,4 @@ export function handler (event, { succeed, fail }) {
   //   path: `/v1/records/${apiName}/${id}`,
   //   body: { name }
   // }, done)
-}
+// }
