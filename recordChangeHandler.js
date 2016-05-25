@@ -12,11 +12,9 @@ export function handler (event, cb) {
 
   console.log(`Changing name from "${priorState.name}" to "${name}" with post to /v1/records/${apiName}/${id}.`)
 
-  // return request({
-  //   method: 'PATCH',
-  //   path: `/v1/records/${apiName}/${id}`,
-  //   body: { name }
-  // }, done)
-
-  return done(null, `/v1/records/${apiName}/${id}`)
+  return request({
+    method: 'PATCH',
+    path: `/v1/records/${apiName}/${id}`,
+    body: { name }
+  }, done)
 }
