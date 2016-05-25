@@ -1,6 +1,7 @@
 import API from './lib/api'
 
 export function handler (event, cb) {
+  console.log(`event: ${JSON.stringify(event, null, 2)}`)
   const request = API(event)
   const done = (e, res) => e ? cb(e) : cb(null, res)
   const { record: { id, apiName }, priorState, changeSet } = event.lxMessage.message.contents
