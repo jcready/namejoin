@@ -18,6 +18,13 @@
         "provisionToken": true,
         "subject": "recordChangePostCommit",
         "handler": "recordChangeHandler.js",
+        "fields": {
+          "fieldsToJoin": [
+            "first_name",
+            "last_name"
+          ],
+          "fieldToSet": "name"
+        },
         "contentPattern": {
           "record": {
             "apiName": "contact"
