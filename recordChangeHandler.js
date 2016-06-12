@@ -13,7 +13,8 @@ export function handler (event, cb) {
 
   const request = API(event)
   const done = (e, res) => e ? cb(e) : cb(null, res)
-  const { record: { id, apiName }, priorState, changeSet } = event.lxMessage.message.contents
+  const { record: { id, apiName }, changeSet } = event.lxMessage.message.contents
+  const priorState = event.lxMessage.message.contents.priorState || {}
   const { fields: { fieldToSet, fieldsToJoin } } = event.config
 
   const newName = determineName(fieldsToJoin, { ...priorState, ...changeSet })
