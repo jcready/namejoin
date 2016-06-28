@@ -11,7 +11,7 @@ pipe(
 export function handler (event, cb) {
   console.log(`event: ${JSON.stringify(event, null, 2)}`)
 
-  const request = API(event)
+  const request = event.request
   const done = (e, res) => e ? cb(e) : cb(null, res)
   const { record: { id, apiName }, changeSet } = event.lxMessage.message.contents
   const priorState = event.lxMessage.message.contents.priorState || {}
