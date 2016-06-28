@@ -1,6 +1,6 @@
 import API from './lib/api'
 import { pipe, map, prop, join, trim, objOf, __ } from 'ramda'
-
+// test
 const determineName = (fieldsToJoin, record) =>
 pipe(
     map(prop(__, record)),
