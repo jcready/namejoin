@@ -13,18 +13,21 @@
   },
   "homepage": "https://github.com/bwestergard/namejoin#readme",
   "lanetix": {
-    "defaultConfigs": [
+    "defaultParameters": {
+      "fields": {
+        "fieldsToJoin": [
+          "first_name",
+          "last_name"
+        ],
+        "fieldToSet": "name"
+      },
+      "record": "contact"
+    },
+    "handlers": [
       {
         "provisionToken": true,
         "subject": "recordChangePostCommit",
         "handler": "recordChangeHandler.js",
-        "fields": {
-          "fieldsToJoin": [
-            "first_name",
-            "last_name"
-          ],
-          "fieldToSet": "name"
-        },
         "contentPattern": {
           "record": {
             "apiName": "contact"
