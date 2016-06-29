@@ -21,11 +21,12 @@ export function handler (event, cb) {
   if (priorState.name !== newName) {
     console.log(`Changing name from "${priorState.name}" to "${newName}" with post to /v1/records/${apiName}/${id}.`)
 
-    return request({
+    /*return request({
       method: 'PATCH',
       path: `/v1/records/${apiName}/${id}`,
       body: objOf(fieldToSet, newName)
-    }, done)
+    }, done)*/
+    cb(null, 'Finished')
   } else {
     cb(null, 'No change')
   }
